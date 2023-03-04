@@ -129,7 +129,7 @@ a.cart svg g circle.dot {
 }
 
 a.cart.cart-filled svg g circle.dot {
-  @apply block;
+  @apply block text-pink-400;
 }
 
 button[disabled] {
