@@ -22,12 +22,12 @@ function Loading() {
 }
 
 const JustArrived = () => {
-  const { data, status, error, run, isLoading } = useAsync({});
+  const { data, error, run, isLoading } = useAsync({});
 
   const refContainer = useRef(null);
 
   useEffect(() => {
-    run(fetch({ url: "/api/product/?page=1&limit=10" }));
+    run(fetch({ url: "/api/products/?page=1&limit=10" }));
   }, [run]);
   return (
     <section className="flex flex-col py-16">
@@ -89,7 +89,7 @@ const JustArrived = () => {
                   <h5 className="text-lg font-semibold mt-4">{item.title}</h5>
                   <span className="">{item.price}</span>
                   <Link
-                    to={`/categories/${item.idc}/product/${item.id}`}
+                    to={`/categories/${item.idc}/products/${item.id}`}
                     className="stretched-link"
                   >
                     {/* <!-- fake children --> */}

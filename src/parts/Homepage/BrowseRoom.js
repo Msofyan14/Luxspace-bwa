@@ -1,6 +1,6 @@
 import useAsync from "helpers/hooks/useAsync";
-import { useEffect } from "react";
 import fetch from "helpers/fetch";
+import { useEffect } from "react";
 
 function Loading({ ratio = {} }) {
   const dummy = [
@@ -55,12 +55,11 @@ function Loading({ ratio = {} }) {
 }
 
 const BrowseRoom = () => {
-  const { data, status, error, run, isLoading } = useAsync({});
+  const { data, run, isLoading } = useAsync({});
 
   useEffect(() => {
     run(fetch({ url: "/api/categories/?page=1&limit=4" }));
   }, [run]);
-  console.log(data, status, error);
 
   const ratioClassNames = {
     wrapper: {
