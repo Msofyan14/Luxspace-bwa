@@ -2,11 +2,11 @@ import { useEffect } from "react";
 import useAsync from "helpers/hooks/useAsync";
 import useForm from "helpers/hooks/useForm";
 import fetch from "helpers/fetch";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useGlobalContex } from "helpers/hooks/useGlobalContex";
 
 const ShippingDetails = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const { data, run, isLoading } = useAsync({});
   const { state, dispatch } = useGlobalContex();
   const { state: payload, fnUpdateState } = useForm({
@@ -44,7 +44,7 @@ const ShippingDetails = () => {
       });
       console.log(res);
       if (res) {
-        history.push("/congratulation");
+        navigate("/congratulation");
         dispatch({ type: "RESET_CART" });
       }
     } catch (error) {
