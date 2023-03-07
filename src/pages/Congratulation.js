@@ -4,10 +4,11 @@ import Header from "parts/Header";
 import Sitemap from "parts/Sitemap";
 import React from "react";
 import { Link } from "react-router-dom";
+import Document from "../parts/Documents";
 
 const Congratulation = () => {
   return (
-    <>
+    <Document>
       <Header />
       <Breadcrumb
         list={[
@@ -43,7 +44,7 @@ const Congratulation = () => {
       </section>
       <Sitemap />
       <Footer />
-    </>
+    </Document>
   );
 };
 

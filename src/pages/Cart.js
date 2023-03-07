@@ -5,10 +5,11 @@ import Footer from "../parts/Footer";
 import Sitemap from "parts/Sitemap";
 import ShoppingCart from "parts/Cart/ShoppingCart";
 import ShippingDetails from "parts/Cart/ShippingDetails";
+import Document from "../parts/Documents";
 
-const HomePage = () => {
+const Cart = () => {
   return (
-    <>
+    <Document>
       <Header theme="black" />
       <Breadcrumb
         list={[
@@ -28,8 +29,8 @@ const HomePage = () => {
 
       <Sitemap />
       <Footer />
-    </>
+    </Document>
   );
 };
 
-export default HomePage;
+export default Cart;
